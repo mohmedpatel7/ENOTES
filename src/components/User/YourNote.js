@@ -135,7 +135,7 @@ export default function YourNote({ showAlert }) {
 
       <div className="container">
         <div className="row my-3">
-          <h2 className="my-5">Your Notes</h2>
+          <h2 class="animated-text">Your Notes...</h2>
           <div className="conatainer mx-3">
             {note.length === 0 && "No notes Avalable..."}
           </div>

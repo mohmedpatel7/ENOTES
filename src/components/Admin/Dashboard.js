@@ -47,7 +47,7 @@ export default function Dashboard({ showAlert }) {
         throw new Error("Failed to fetch user data");
       }
 
-    git   // Remove the deleted user from the state
+      // Remove the deleted user from the state
       setUsers(users.filter((user) => user._id !== user_id));
       showAlert("User deleted successfully", "success");
     } catch (error) {
@@ -59,6 +59,8 @@ export default function Dashboard({ showAlert }) {
     <>
       <div className="container" style={{ paddingTop: "75px" }}>
         <h1>Users</h1>
+        <br />
+        <p class="animated-text">User information!</p>
         <div className="table-responsive">
           <table className="table table-striped ">
             <thead>
