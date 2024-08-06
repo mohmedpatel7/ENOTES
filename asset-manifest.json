@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ENOTES/static/css/main.3fd27f74.css",
+    "main.js": "/ENOTES/static/js/main.3b6feb3e.js",
+    "static/js/453.c5eaf93b.chunk.js": "/ENOTES/static/js/453.c5eaf93b.chunk.js",
+    "index.html": "/ENOTES/index.html",
+    "main.3fd27f74.css.map": "/ENOTES/static/css/main.3fd27f74.css.map",
+    "main.3b6feb3e.js.map": "/ENOTES/static/js/main.3b6feb3e.js.map",
+    "453.c5eaf93b.chunk.js.map": "/ENOTES/static/js/453.c5eaf93b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3fd27f74.css",
+    "static/js/main.3b6feb3e.js"
+  ]
+}
