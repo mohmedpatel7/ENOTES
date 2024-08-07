@@ -30,7 +30,7 @@ export default function Navbar({
           <span className="navbar-toggler-icon"></span>
         </button>
         <div
-          className="collapse navbar-collapse justify-content-center"
+          className="collapse navbar-collapse justify-content-between"
           id="navbarNav"
         >
           <ul className="navbar-nav">
@@ -68,56 +68,56 @@ export default function Navbar({
               </>
             )}
           </ul>
-        </div>
-        <div className="d-flex ms-auto">
-          {/* Display buttons based on login status */}
-          {!isLoggedIn && !isAdminLogin && (
-            <>
-              <button
-                className="btn-profile me-2"
-                onClick={() => setadminShowModal(true)}
-                title="admin"
-              >
-                <i className="fa-solid fa-user-tie"></i>
-              </button>
-              <button
-                className="btn btn-login me-2"
-                onClick={() => setShowModal(true)}
-                id="btn-login"
-              >
-                Login
-              </button>
-              <button
-                className="btn btn-signup me-2"
-                onClick={() => setShowSignupModal(true)}
-                id="btn-signup"
-              >
-                SignUp
-              </button>
-            </>
-          )}
-          {isLoggedIn && !isAdminLogin && (
-            <>
-              <button
-                className="btn-profile me-2"
-                onClick={() => setshowProfile(true)}
-                title="Profile"
-              >
-                <i className="fa-solid fa-user"></i>
-              </button>
-            </>
-          )}
-          {isAdminLogin && (
-            <>
-              <button
-                className="btn-profile me-2"
-                onClick={() => setshowAdminProfile(true)}
-                title="Profile"
-              >
-                <i className="fa-solid fa-user"></i>
-              </button>
-            </>
-          )}
+          <div className="d-flex">
+            {/* Display buttons based on login status */}
+            {!isLoggedIn && !isAdminLogin && (
+              <>
+                <button
+                  className="btn-profile me-2"
+                  onClick={() => setadminShowModal(true)}
+                  title="admin"
+                >
+                  <i className="fa-solid fa-user-tie"></i>
+                </button>
+                <button
+                  className="btn btn-login me-2"
+                  onClick={() => setShowModal(true)}
+                  id="btn-login"
+                >
+                  Login
+                </button>
+                <button
+                  className="btn btn-signup me-2"
+                  onClick={() => setShowSignupModal(true)}
+                  id="btn-signup"
+                >
+                  SignUp
+                </button>
+              </>
+            )}
+            {isLoggedIn && !isAdminLogin && (
+              <>
+                <button
+                  className="btn-profile me-2"
+                  onClick={() => setshowProfile(true)}
+                  title="Profile"
+                >
+                  <i className="fa-solid fa-user"></i>
+                </button>
+              </>
+            )}
+            {isAdminLogin && (
+              <>
+                <button
+                  className="btn-profile me-2"
+                  onClick={() => setshowAdminProfile(true)}
+                  title="Profile"
+                >
+                  <i className="fa-solid fa-user"></i>
+                </button>
+              </>
+            )}
+          </div>
         </div>
       </div>
     </nav>
