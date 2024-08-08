@@ -21,7 +21,7 @@ export default function Login({ showModal, setShowModal, showAlert }) {
 
     try {
       // Send POST request to the server with login details
-      const response = await fetch("http://localhost:5000/api/auth/login", {
+      const response = await fetch(`${window.location.origin}/api/auth/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

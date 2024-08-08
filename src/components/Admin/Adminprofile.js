@@ -12,13 +12,16 @@ export default function Profile({
 
   const fetchAdminData = useCallback(async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/admin/getadmin", {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-          "admin-token": localStorage.getItem("admin_token"),
-        },
-      });
+      const response = await fetch(
+        `${window.location.origin}/api/admin/getadmin`,
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+            "admin-token": localStorage.getItem("admin_token"),
+          },
+        }
+      );
 
       if (!response.ok) {
         throw new Error("Failed to fetch admin data");

@@ -26,7 +26,7 @@ export default function Login({
     try {
       // Send POST request to the server with login details
       const response = await fetch(
-        "http://localhost:5000/api/admin/adminLogin",
+        `${window.location.origin}/api/admin/adminLogin`,
         {
           method: "POST",
           headers: {

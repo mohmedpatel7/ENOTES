@@ -8,13 +8,16 @@ export default function Profile({ showProfile, setshowProfile, showAlert }) {
 
   const fetchUserData = useCallback(async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/auth/getuser", {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-          "auth-token": localStorage.getItem("token"),
-        },
-      });
+      const response = await fetch(
+        `${window.location.origin}/api/auth/getuser`,
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+            "auth-token": localStorage.getItem("token"),
+          },
+        }
+      );
 
       if (!response.ok) {
         throw new Error("Failed to fetch user data");
@@ -37,7 +40,7 @@ export default function Profile({ showProfile, setshowProfile, showAlert }) {
   const logout = () => {
     // Show confirmation dialog
     const confirmLogout = window.confirm("Are you sure you want to log out?");
-  
+
     // If the user confirms, proceed with logout
     if (confirmLogout) {
       localStorage.removeItem("token");
@@ -49,7 +52,6 @@ export default function Profile({ showProfile, setshowProfile, showAlert }) {
       showAlert("Logout cancelled.", "info");
     }
   };
-  
 
   return (
     <Modal

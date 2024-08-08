@@ -7,7 +7,7 @@ export default function Dashboard({ showAlert }) {
     const fetchUserdata = async () => {
       try {
         const response = await fetch(
-          "http://localhost:5000/api/notes/getUserdata",
+          `${window.location.origin}/api/notes/getUserdata`,
           {
             method: "GET",
             headers: {
@@ -33,7 +33,7 @@ export default function Dashboard({ showAlert }) {
   const deleteUser = async (user_id) => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/auth/deleteUser/${user_id}`,
+        `$(window.location.origin)/api/auth/deleteUser/${user_id}`,
         {
           method: "DELETE",
           headers: {
