@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import NoteContext from "./NoteContext"; // importin notecontext from NoteContext.js...
 
 const NoteState = (props) => {
-  const host = `${window.location.origin}`; // host is the backend server address
+  const host = `http://localhost:5000`; // host is the backend server address
 
   const notes = [];
   const [note, setNote] = useState(notes);

@@ -7,7 +7,7 @@ export default function Dashboard({ showAlert }) {
     const fetchUserdata = async () => {
       try {
         const response = await fetch(
-          `${window.location.origin}/api/notes/getUserdata`,
+          `http://localhost:5000/api/notes/getUserdata`,
           {
             method: "GET",
             headers: {
